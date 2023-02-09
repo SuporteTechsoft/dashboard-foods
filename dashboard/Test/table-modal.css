@@ -1,0 +1,176 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #a4a4a4;
+}
+
+/* Root */
+#table .value-item {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+#table .coin {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+#table .value-item .value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Root - end */
+
+#table {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 24px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  padding: 40px;
+
+  border: 0.5px solid #5A5A5A;
+  border-radius: 8px;
+
+  background-color: #ffffff;
+
+  user-select: none;
+
+  /*  Optional parameter */
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+#number {
+  font-size: 16px;
+  color: #5A5A5A;
+}
+
+#itens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  min-width: 320px;
+}
+
+#itens .list {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+
+  border: 0.5px solid #5A5A5A;
+  border-radius: 8px;
+
+}
+
+#itens table {
+  text-align: left;
+  border-collapse: collapse;
+}
+
+#itens td, #itens th {
+  padding: 0px 8px;
+}
+
+#itens thead th {
+  padding-bottom: 16px;
+
+  min-width: 120px;
+}
+
+/* First line padding */
+#itens tbody tr:first-child td {
+  padding-top: 24px;
+}
+
+#itens tbody td {
+  padding: 8px 8px;
+}
+
+#itens tbody td {
+  font-weight: 700;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+#itens tbody td:first-child {
+  width: 320px;
+}
+
+#itens tbody td:nth-child(2), #itens thead th:nth-child(2) {
+  text-align: center;
+}
+
+#itens thead th:not(:first-child) {
+  text-align: center;
+}
+
+#itens thead {
+  border-bottom: 0.5px solid #5A5A5A;
+}
+
+#totais {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  padding: 0 16px;
+  /* background-color: purple; */
+}
+
+#totais .calc {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: inherit;
+}
+
+#totais .calc > div {
+  font-size: 12px;
+}
+
+/* Separator */
+#totais hr {
+  border: 1px dashed #bbbbbb;
+  stroke-dasharray: 12,4;
+}
+
+#totais .calc div, #totais .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#salesman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+
+  font-size: 12px;
+}
+
+#salesman .label {
+  font-weight: 400;
+}

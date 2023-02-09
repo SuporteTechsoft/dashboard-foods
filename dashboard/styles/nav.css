@@ -1,0 +1,72 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 64px;
+  padding: 16px 10%;
+  display: flex;
+  background-color: #f9f9f9;
+  justify-content: space-between;
+
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* * ItsAlive */
+#itsAlive {
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  font-family: NotoSans;
+  font-size: 1.8rem;
+
+  /* background-color: purple; */
+}
+
+#itsAlive .status {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+
+}
+
+/* ? Change value display block to none for toggle on to off */
+/* ? --> START <-- */
+.online {
+  border: 2px solid #003e07;
+  animation: beep 1s infinite;
+  animation-timing-function: ease;
+  display: block;
+}
+
+.offline {
+  border: 2px solid #850000;
+  background-color: #e50101;
+  display: none;
+}
+
+@keyframes beep {
+  0% {
+    background-color: #00c900;
+  }
+  50% {
+    background-color: #005c00;
+  }
+  100% {
+    background-color: #00c900;
+  }
+}
+/* ? --> END <-- */
+
+#business {
+  display: flex;
+  /* justify-content: left; */
+  align-items: center;
+  font-size: 16px;
+  font-family: NotoSans;
+  font-weight: bold;
+}
