@@ -7,11 +7,10 @@ import { loadTables } from './controllers/loadtTables.js'
 import { Mesa } from './api/mesa.js'
 
 // * Test Start
-// await Mesa({ mesa: 1, status: 'O' })
+// await Mesa({status: 'O' })
 // await Mesa()
 // await itsAlive({ empresa: true })
 // await itsAlive()
-// console.log(...data?.mesa)
 // await Vendedores()
 // await Produtos()
 // await Produtos({ grupo: 2 })
@@ -20,15 +19,6 @@ import { Mesa } from './api/mesa.js'
 // await ProdutosMesa({ mesa: 1 })
 // ! Test End
 
-/**
- * desconto: "0.00"
- * mesa: "1"
- * mesaprinc: "0"
- * nome: "Ocupado"
- * pago: "0.00"
- * status: "O"
- */
-
 let data = await Mesa()
-
-loadTables(data)
+// let data = await Mesa({status: 'O' })
+await loadTables(data)
