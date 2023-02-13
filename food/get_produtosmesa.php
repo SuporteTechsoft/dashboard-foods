@@ -8,7 +8,6 @@ require_once __DIR__ . '/db_connect.php';
 $mesa = $_GET['mesa'];
 
 $result = query("SELECT * FROM mesaitem where mesa = $mesa and chave = 0 order by descricao");
-echo 'teste';
 
 if (mysqli_num_rows($result) > 0) {
     
