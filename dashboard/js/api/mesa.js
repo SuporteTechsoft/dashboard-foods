@@ -15,7 +15,7 @@ export const Mesa = async props => {
 
   const res = await fetch(url)
   const data = await res.json()
-  console.log(url)
-  // console.log(data)
-  return data
+  // console.log(url)
+  // console.log(data.mesa)
+  return data.mesa
 }

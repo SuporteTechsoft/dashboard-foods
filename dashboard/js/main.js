@@ -3,11 +3,11 @@ import { Vendedores } from './api/vendedores.js'
 import { Produtos } from './api/produtos.js'
 import { Categorias } from './api/categorias.js'
 import { ProdutosMesa } from './api/produtosMesa.js'
-import { loadTables } from './controllers/loadtTables.js'
+import { loadTables } from './controllers/loadTableList.js'
 import { Mesa } from './api/mesa.js'
 
 // * Test Start
-// await Mesa({status: 'O' })
+// await Mesa({status: 'O', mesa: 1 })
 // await Mesa()
 // await itsAlive({ empresa: true })
 // await itsAlive()
@@ -19,6 +19,6 @@ import { Mesa } from './api/mesa.js'
 // await ProdutosMesa({ mesa: 1 })
 // ! Test End
 
-let data = await Mesa()
+// let data = await Mesa()
 // let data = await Mesa({status: 'O' })
-await loadTables(data)
+await loadTables()
