@@ -3,8 +3,11 @@ import { Vendedores } from './api/vendedores.js'
 import { Produtos } from './api/produtos.js'
 import { Categorias } from './api/categorias.js'
 import { ProdutosMesa } from './api/produtosMesa.js'
-import { loadTables } from './controllers/loadTableList.js'
 import { Mesa } from './api/mesa.js'
+
+
+import { loadTables } from './controllers/loadTableList.js'
+import { loadBusiness } from './controllers/loadBusiness.js'
 
 // * Test Start
 // await Mesa({status: 'O', mesa: 1 })
@@ -22,3 +25,4 @@ import { Mesa } from './api/mesa.js'
 // let data = await Mesa()
 // let data = await Mesa({status: 'O' })
 await loadTables()
+await loadBusiness()

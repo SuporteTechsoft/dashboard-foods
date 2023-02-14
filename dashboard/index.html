@@ -18,12 +18,16 @@
     <link href="/dashboard/assets/favicon.ico" rel="icon" type="image/ico" />
 
     <!-- Styles -->
+    <!-- * Global -->
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/fonts.css" />
-    <link rel="stylesheet" href="./styles/nav.css" />
+    <!-- ? Layouts -->
+    <link rel="stylesheet" href="./styles/layouts/nav.css" />
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/section.css" />
-    <link rel="stylesheet" href="./styles/table-card.css" />
+    <link rel="stylesheet" href="./styles/layouts/section.css" />
+    <!-- ? Components -->
+    <link rel="stylesheet" href="./styles/components/table-card.css" />
+    <link rel="stylesheet" href="./styles/components/button.css" />
   </head>
 
   <body>
@@ -34,7 +38,7 @@
         <div class="label font-primary bold">Online</div>
       </div>
       <div id="business">
-        <div class="font-primary semi-bold">Nome empresa</div>
+        <h3 class="font-primary semi-bold">. . .</h3>
       </div>
     </nav>
     <header></header>
@@ -45,7 +49,7 @@
             <!-- icon -->
             <i class="material-symbols-outlined semi-bold">search</i>
             <!-- input -->
-            <input type="text" placeholder="Pesquisar" class="font-primary bold" />
+            <input type="text" placeholder="E. g. 001" class="font-primary bold" />
           </div>
           <div class="selectores">
             <!-- buttons -->
@@ -55,19 +59,7 @@
           </div>
         </div>
         <div class="tables" id="tables">
-          <!-- <div class="card">
-            <div class="separator">
-              <div class="number">0000</div>
-              <div class="status">Livre</div>
-            </div>
-            <div class="separator">
-              <div class="name">-</div>
-              <div class="bill">
-                <span>R$</span>
-                <h1>0000,00</h1>
-              </div>
-            </div>
-          </div> -->
+          <!-- JS INSERT MODEL CARD -->
         </div>
         <div class="show-more">
           <!-- <span>Exibir mais</span> -->
@@ -75,11 +67,6 @@
           <i class="material-symbols-outlined"></i>
         </div>
       </section>
-      <!-- <section class="products">
-            <div class="filter"></div>
-            <div class="data"></div>
-            <div class="show-more"></div>
-        </section> -->
     </main>
     <footer></footer>
   </body>
