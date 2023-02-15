@@ -1,19 +1,10 @@
-.tables {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
-
-  width: 100%;
-}
-
-.card {
+#tables .card {
+  background-color: white;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 
-  width: 200px;
+  width: 256px;
   height: 80px;
 
   padding: 8px;
@@ -21,16 +12,18 @@
   border: 1px solid #8c8c8c;
 
   font-family: 'Montserrat', sans-serif;
+}
 
+#tables .occupied {
   cursor: pointer;
 }
 
-.separator {
+#tables .card .separator {
   display: flex;
   justify-content: space-between;
 }
 
-.number {
+#tables .card .number {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -44,46 +37,57 @@
   width: 48px;
 }
 
-#tables .status {
+#tables .card .status {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 24px;
-  width: 80px;
+  width: 96px;
+  border-radius: 4px;
 
   font-weight: 600;
   font-size: 12px;
-  color: #5a5a5a;
 }
 
-.name {
+#tables .card .occupied {
+  color: #851111;
+  background-color: #f07584;
+}
+
+#tables .card .free {
+  color: #006400;
+  background-color: #88ed59;
+}
+
+#tables .card .name {
   display: flex;
   justify-content: left;
   align-items: center;
 
   padding-left: 4px;
-  max-width: 96px;
+  max-width: 120px;
+  overflow: hidden;
   height: 24px;
 
   font-weight: 600;
   font-size: 12px;
 }
 
-.bill {
+#tables .card .bill {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: baseline;
 
-  min-width: 80px;
+  min-width: 96px;
   height: 24px;
 }
 
-.bill span {
+#tables .card .bill span {
   font-size: 10px;
   font-weight: 500;
 }
 
-.bill h1 {
+#tables .card .bill h1 {
   font-size: 16px;
   font-weight: 600;
 }

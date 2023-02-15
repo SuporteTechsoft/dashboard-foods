@@ -13,6 +13,6 @@ export const ProdutosMesa = async props => {
   const res = await fetch(url)
   const data = await res.json()
   // console.log(url)
-  // console.log(data)
+  // console.log(data.produtos)
   return data.produtos
 }

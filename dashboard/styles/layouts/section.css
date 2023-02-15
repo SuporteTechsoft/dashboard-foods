@@ -13,48 +13,21 @@
   overflow: clip;
 }
 
-/* Filters */
-.filters {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  width: 100%;
-  padding: 16px 32px;
 
-  border-bottom: 0.5px solid #b6b6b6;
-}
-
-.search-field {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-}
-
-.search-field i {
-  font-size: 16px;
-  color: #6c6c6c;
-}
-
-.search-field input {
-  border: none;
-  border-bottom: 1px solid #9c9c9c;
-  width: 260px;
-  padding: 8px 12px;
-}
-
-.selectores {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-}
 
 
 /* ? Tables */
-.tables {
+#tables {
   padding: 0px 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  width: 100%;
 }
 
 /* ? Show more */

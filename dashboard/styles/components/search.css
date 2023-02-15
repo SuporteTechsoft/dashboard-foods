@@ -1,0 +1,18 @@
+.search-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.search-field i {
+  font-size: 16px;
+  color: #6c6c6c;
+}
+
+.search-field input {
+  border: none;
+  border-bottom: 1px solid #9c9c9c;
+  width: 260px;
+  padding: 8px 12px;
+}

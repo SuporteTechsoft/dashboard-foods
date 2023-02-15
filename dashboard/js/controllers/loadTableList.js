@@ -1,5 +1,6 @@
 import { Mesa } from '../api/mesa.js'
 import { ProdutosMesa } from '../api/produtosMesa.js'
+import { Vendedores } from '../api/vendedores.js'
 import { UUID } from '../functions/UUID.js'
 
 
@@ -32,10 +33,10 @@ const fetchAllData = async () => {
 // ? Default layout from card insert
 const cardTable = props => {
   return `
-<div class="card" class="${props.uuid}">
+<div class="card ${props.status != 'L' ? 'occupied' : ''}" id="${props.uuid}">
 <div class="separator">
   <div class="number">${props.mesa.padStart(3, '0')}</div>
-  <div class="status">${props.status == 'L' ? 'Livre' : 'Ocupado'}</div>
+  <div class="status ${props.status == 'L' ? 'free' : 'occupied'}">${props.status == 'L' ? 'Livre' : 'Ocupado'}</div>
 </div>
 <div class="separator">
   <div class="name">${props.nome != 'Livre' && props.nome != 'Ocupado' ? props.nome : 'CONSUMIDOR'}</div>

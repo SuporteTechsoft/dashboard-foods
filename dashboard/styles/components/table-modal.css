@@ -17,7 +17,7 @@
 /* Root */
 #pop-up .value-item {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: baseline;
 }
 
@@ -117,17 +117,37 @@
   width: 320px;
 }
 
+#pop-up .itens thead th:not(:first-child) {
+  text-align: center;
+}
+
 #pop-up .itens tbody td:nth-child(2),
 #pop-up .itens thead th:nth-child(2) {
   text-align: center;
 }
 
-#pop-up .itens thead th:not(:first-child) {
-  text-align: center;
+#pop-up .itens tbody td:nth-child(3),
+#pop-up .itens thead th:nth-child(3) {
+  text-align: left;
 }
 
 #pop-up .itens thead {
   border-bottom: 0.5px solid #5a5a5a;
+}
+
+#pop-up .list {
+  max-height: 320px;
+  overflow-y: scroll;
+}
+
+#pop-up .list::-webkit-scrollbar {
+  width: 5px;
+  cursor: pointer;
+}
+
+#pop-up .list::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #5A5A5A;
 }
 
 #pop-up .totais {
@@ -165,8 +185,7 @@
 }
 
 #pop-up .total {
-  font-size: 16px;
-  background-color: purple;
+  font-size: 20px;
 }
 
 #pop-up .salesman {
