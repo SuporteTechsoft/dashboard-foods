@@ -94,7 +94,7 @@ const popUpModal = async (table, items, sellers) => {
         </div>
         <hr />
         <div class="salesman">
-          <h3 class="label">salesman</h3>
+          <h3 class="label">vendedor</h3>
           <h3 class="name">${getSalesman(items, sellers)}</h3>
         </div>
       </div>
