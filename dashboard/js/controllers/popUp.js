@@ -15,7 +15,6 @@ const getId = event => {
   return false
 }
 
-
 const getSalesman = (dataTable, sellers) => {
   let mainSeller = 'Balcao'
   let sellerId = dataTable[0]
@@ -30,73 +29,76 @@ const popUpModal = async (table, items, sellers) => {
     /* <td>${item.codigo.padStart(4, '0')} - ${item.descricao}</td> */
   }
   return `
-  <div id="modal-table">
-  <div id="pop-up">
-    <div class="number">
-      <h3>${table.mesa.padStart(3, '0')}</h3>
-    </div>
-    <div class="itens">
-      <h3>Itens</h3>
-      <div class="list">
-        <table class="table-itens">
-          <thead>
-            <tr>
-              <th>Itens</th>
-              <th>Quantidade</th>
-              <th>Valor</th>
-            </tr>
-          </thead>
-          <tbody>
-          ${items.map(
-            item => `<tr>
-              <td>${item.descricao}</td>
-              <td>${item.quantidade.padStart(3, '0')}</td>
-              <td>
-                <div class="value-item">
-                  <h5 class="coin">R$</h5>
-                  <h4 class="value">${item.vltotal}</h4>
+    <div id="modal-table">
+      <div id="pop-up">
+        <div class="number">
+          <h3>Mesa: ${table.mesa.padStart(3, '0')}</h3>
+        </div>
+        <div class="items">
+          <h3>Itens</h3>
+          <div class="list">
+            <div class="table-items">
+              <div class="head-table">
+                <div class="row">
+                  <div class="cell">Produtos</div>
+                  <div class="cell">Quantidade</div>
+                  <div class="cell">Valor</div>
                 </div>
-              </td>
-            </tr>`
-          ).join('')}
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="totais">
-      <div class="calc">
-        <div class="discount">
-          <h4 class="label">Total Desconto</h4>
-          <div class="value-item">
-            <h5 class="coin">R$</h5>
-            <h4 class="value">${table.desconto}</h4>
+              </div>
+              <div class="body-table">
+                ${items
+                  .map(
+                    item => `
+                  <div class="row">
+                    <div class="cell">${item.descricao}</div>
+                    <div class="cell">${item.quantidade.padStart(3, '0')}</div>
+                    <div class="cell">
+                      <div class="value-item">
+                        <h5 class="coin">R$</h5>
+                        <h4 class="value">${item.vltotal}</h4>
+                      </div>
+                    </div>
+                  </div>
+                  `
+                  )
+                  .join('')}
+              </div>
+            </div>
           </div>
         </div>
-        <div class="products">
-          <h4 class="label">Total Itens</h4>
-          <div class="value-item">
-            <h5 class="coin">R$</h5>
-            <h4 class="value">${table.total}</h4>
+        <div class="totais">
+          <div class="calc">
+            <div class="discount">
+              <h4 class="label">Total Desconto</h4>
+              <div class="value-item">
+                <h5 class="coin">R$</h5>
+                <h4 class="value">${table.desconto}</h4>
+              </div>
+            </div>
+            <div class="products">
+              <h4 class="label">Total Produtos</h4>
+              <div class="value-item">
+                <h5 class="coin">R$</h5>
+                <h4 class="value">${table.total}</h4>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="total">
+            <h4 class="label">Total</h4>
+            <div class="value-item">
+              <h5 class="coin">R$</h5>
+              <h4 class="value">${table.total}</h4>
+            </div>
           </div>
         </div>
-      </div>
-      <hr />
-      <div class="total">
-        <h4 class="label">Total</h4>
-        <div class="value-item">
-          <h5 class="coin">R$</h5>
-          <h4 class="value">${table.total}</h4>
+        <hr />
+        <div class="salesman">
+          <h3 class="label">salesman</h3>
+          <h3 class="name">${getSalesman(items, sellers)}</h3>
         </div>
       </div>
     </div>
-    <hr />
-    <div class="salesman">
-      <h3 class="label">vendedor</h3>
-      <h3 class="name">${getSalesman(items, sellers)}</h3>
-    </div>
-  </div>
-</div>
-
   `
 }
 
@@ -116,6 +118,5 @@ export const openPopUp = async (event, tables, sellers) => {
 
 export const closePopUp = event => {
   let id = event.target.id
-  if (id == 'modal-table')
-    document.getElementById('modal-table').remove()
+  if (id == 'modal-table') document.getElementById('modal-table').remove()
 }
